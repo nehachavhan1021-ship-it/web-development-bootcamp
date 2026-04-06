@@ -1,0 +1,47 @@
+body{
+    background-color:rgb(122, 125, 146) ;
+}
+table{
+    border: 1px solid black;
+    border-collapse:collapse;
+    /* border-collapse: seprate; */
+    text-align: left;box-shadow: 1
+    
+   
+    
+}
+hr{
+    border-color: rgb(9, 8, 8);
+    
+}
+tr:nth-child(even){
+    background-color:  rgb(116, 138, 157);
+}
+
+th,td{
+    border: 2px solid rgb(40, 70, 187);
+    padding: 10px;
+
+
+}
+th:hover{
+    background-color: rgb(133, 75, 75);
+}
+thead{
+    background-color: rgb(125, 166, 131);
+}
+caption{
+     font-weight:bold ;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: large;
+     color: rgb(5, 12, 45);
+}
+thead tr{
+    border: 10px soli;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+

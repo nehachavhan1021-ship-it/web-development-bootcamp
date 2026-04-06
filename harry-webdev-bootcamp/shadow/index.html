@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadow Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            /* TEXT SHADOW */
+            text-shadow: 2px 2px 5px gray;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 150px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        /* Simple Shadow */
+        .shadow1 {
+            box-shadow: 5px 5px 10px gray;
+        }
+
+        /* Soft Shadow */
+        .shadow2 {
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Strong Shadow */
+        .shadow3 {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* Inset Shadow */
+        .shadow4 {
+            box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+        }
+
+        /* Multiple Shadows */
+        .shadow5 {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2),
+                        0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Hover Effect */
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        /* Glow Text */
+        .glow {
+            color: rgb(13, 13, 129);
+            text-shadow: 0 0 10px blue, 0 0 20px lightblue;
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Shadow Examples</h1>
+
+    <div class="container">
+        <div class="box shadow1">Simple</div>
+        <div class="box shadow2">Soft</div>
+        <div class="box shadow3">Strong</div>
+        <div class="box shadow4">Inset</div>
+        <div class="box shadow5">Multiple</div>
+    </div>
+
+    <h2 class="glow">Glow Text Effect</h2>
+
+</body>
+</html>

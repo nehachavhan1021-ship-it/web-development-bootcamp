@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Complete Guide</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+/* COMMON CONTAINER */
+.container {
+    display: flex;
+    background: #222;
+    padding: 20px;
+    margin: 20px;
+    gap: 10px;
+}
+
+.box {
+    background: crimson;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* FLEX DIRECTION */
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+/* JUSTIFY CONTENT (Horizontal) */
+.jc-center {
+    justify-content: center;
+}
+
+.jc-between {
+    justify-content: space-between;
+}
+
+.jc-around {
+    justify-content: space-around;
+}
+
+/* ALIGN ITEMS (Vertical) */
+.ai-center {
+    align-items: center;
+    height: 150px;
+}
+
+.ai-end {
+    align-items: flex-end;
+    height: 150px;
+}
+
+/* FLEX WRAP */
+.wrap {
+    flex-wrap: wrap;
+}
+
+.wrap .box {
+    width: 100px;
+}
+
+/* FLEX GROW */
+.grow .box {
+    flex: 1;
+}
+
+/* FLEX SHRINK */
+.shrink .box:nth-child(2) {
+    flex-shrink: 3;
+}
+
+/* FLEX BASIS */
+.basis .box {
+    flex-basis: 150px;
+}
+
+/* ORDER */
+.order .box:nth-child(1) {
+    order: 3;
+}
+.order .box:nth-child(2) {
+    order: 1;
+}
+.order .box:nth-child(3) {
+    order: 2;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Flexbox Complete Demo</h1>
+
+<!-- FLEX DIRECTION -->
+<h2>Flex Direction</h2>
+<div class="container row">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+
+<div class="container column">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+
+<!-- JUSTIFY CONTENT -->
+<h2>Justify Content</h2>
+<div class="container jc-center">
+    <div class="box">A</div>
+    <div class="box">B</div>
+</div>
+
+<div class="container jc-between">
+    <div class="box">A</div>
+    <div class="box">B</div>
+</div>
+
+<div class="container jc-around">
+    <div class="box">A</div>
+    <div class="box">B</div>
+</div>
+
+<!-- ALIGN ITEMS -->
+<h2>Align Items</h2>
+<div class="container ai-center">
+    <div class="box">1</div>
+    <div class="box">2</div>
+</div>
+
+<div class="container ai-end">
+    <div class="box">1</div>
+    <div class="box">2</div>
+</div>
+
+<!-- FLEX WRAP -->
+<h2>Flex Wrap</h2>
+<div class="container wrap">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+</div>
+
+<!-- FLEX GROW -->
+<h2>Flex Grow</h2>
+<div class="container grow">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+
+<!-- FLEX SHRINK -->
+<h2>Flex Shrink</h2>
+<div class="container shrink">
+    <div class="box">1</div>
+    <div class="box">2 (Shrinks more)</div>
+    <div class="box">3</div>
+</div>
+
+<!-- FLEX BASIS -->
+<h2>Flex Basis</h2>
+<div class="container basis">
+    <div class="box">1</div>
+    <div class="box">2</div>
+</div>
+
+<!-- ORDER -->
+<h2>Order</h2>
+<div class="container order">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+
+</body>
+</html>

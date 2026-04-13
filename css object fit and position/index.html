@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Object Fit & Position</title>
+
+<style>
+    body {
+        font-family: Arial;
+        background: #111;
+        color: white;
+        text-align: center;
+    }
+
+    h2 {
+        margin-top: 40px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px;
+    }
+
+    .box {
+        width: 250px;
+        height: 180px;
+        border: 2px solid white;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .box img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* OBJECT-FIT EXAMPLES */
+    .cover img {
+        object-fit:cover;
+    }
+
+    .contain img {
+        object-fit: contain;
+        background: black;
+    }
+
+    .fill img {
+        object-fit: fill;
+    }
+
+    .none img {
+        object-fit: none;
+    }
+
+    .scale img {
+        object-fit: scale-down;
+    }
+
+    /* OBJECT-POSITION EXAMPLES */
+    .top img {
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .bottom img {
+        object-fit: cover;
+        object-position: bottom;
+    }
+
+    .left img {
+        object-fit: cover;
+        object-position: left;
+    }
+
+    .right img {
+        object-fit: cover;
+        object-position: right;
+    }
+
+    .custom img {
+        object-fit: cover;
+        object-position: 20% 30%;
+    }
+
+    /* HOVER EFFECT */
+    .box img {
+        transition: 0.5s;
+    }
+
+    .box:hover img {
+        transform: scale(1.2);
+    }
+
+</style>
+</head>
+<body>
+
+<h1>CSS Object-Fit & Object-Position Demo</h1>
+
+<!-- OBJECT-FIT -->
+<h2>Object-Fit Examples</h2>
+
+<div class="container">
+
+    <div class="box cover">
+        <img src="/boxmodel/practice-card/image.png">
+        <p>cover</p>
+    </div>
+
+    <div class="box contain">
+        <img src="/boxmodel/practice-card/image.png">
+        <p>contain</p>
+    </div>
+
+    <div class="box fill">
+        <img src="/boxmodel/practice-card/image.png">
+        <p>fill</p>
+    </div>
+
+    <div class="box none">
+        <img src="/boxmodel/practice-card/image.png">
+        <p>none</p>
+    </div>
+
+    <div class="box scale">
+        <img src="/boxmodel/practice-card/image.png">
+        <p>scale-down</p>
+    </div>
+
+</div>
+
+<!-- OBJECT-POSITION -->
+<h2>Object-Position Examples</h2>
+
+<div class="container">
+
+    <div class="box top">
+        <img src="/boxmodel/practice-card/image.png">
+        <p>top</p>
+    </div>
+
+    <div class="box bottom">
+        <img src="/boxmodel/practice-card/image.png">
+        <p>bottom</p>
+    </div>
+
+    <div class="box left">
+        <img src="/boxmodel/practice-card/image.png">
+        <p>left</p>
+    </div>
+
+    <div class="box right">
+        <img src="/boxmodel/practice-card/image.png">
+        <p>right</p>
+    </div>
+
+    <div class="box custom">
+        <img src="/boxmodel/practice-card/image.png">
+        <p>20% 30%</p>
+    </div>
+
+</div>
+
+</body>
+</html>

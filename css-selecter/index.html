@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Selectors Complete</title>
+
+<style>
+
+/* 1. UNIVERSAL SELECTOR */
+* {
+    font-family: Arial;
+}
+
+/* 2. ELEMENT SELECTOR */
+h1 {
+    color: cyan;
+}
+
+/* 3. CLASS SELECTOR */
+.box {
+    background: crimson;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+}
+
+/* 4. ID SELECTOR */
+#unique {
+    background: purple;
+}
+
+/* 5. GROUP SELECTOR */
+h2, p {
+    color: yellow;
+}
+
+/* 6. DESCENDANT SELECTOR */
+.container p {
+    background: #333;
+}
+
+/* 7. CHILD SELECTOR */
+.container > span {
+    color: lime;
+}
+
+/* 8. ADJACENT SIBLING */
+h3 + p {
+    color: orange;
+}
+
+/* 9. GENERAL SIBLING */
+h3 ~ div {
+    border: 2px solid white;
+}
+
+/* 10. ATTRIBUTE SELECTOR */
+input[type="text"] {
+    border: 2px solid red;
+}
+
+/* 11. PSEUDO-CLASS */
+button:hover {
+    background: green;
+}
+
+li:first-child {
+    color: pink;
+}
+
+li:last-child {
+    color: lightblue;
+}
+
+li:nth-child(2) {
+    color: gold;
+}
+
+/* 12. PSEUDO-ELEMENT */
+p::first-letter {
+    font-size: 30px;
+    color: red;
+}
+
+p::after {
+    content: " 🔥";
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>CSS Selectors Demo</h1>
+
+<h2>Basic Selectors</h2>
+<div class="box">Class Selector</div>
+<div id="unique">ID Selector</div>
+
+<h2>Combinators</h2>
+<div class="container">
+    <p>Descendant selector</p>
+    <span>Child selector</span>
+</div>
+
+<h3>Sibling Test</h3>
+<p>Adjacent sibling</p>
+<div>General sibling 1</div>
+<div>General sibling 2</div>
+
+<h2>Attribute Selector</h2>
+<input type="text" placeholder="Text input">
+<input type="password" placeholder="Password input">
+
+<h2>Pseudo Classes</h2>
+<button>Hover Me</button>
+
+<ul>
+    <li>First</li>
+    <li>Second</li>
+    <li>Last</li>
+</ul>
+
+<h2>Pseudo Elements</h2>
+<p>This is a paragraph for pseudo-elements.</p>
+
+</body>
+</html>

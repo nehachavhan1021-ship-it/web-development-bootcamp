@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All CSS Animations Demo</title>
+
+<style>
+body {
+    margin: 0;
+    background: #111;
+    color: white;
+    font-family: Arial;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* COMMON BOX */
+.box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* 1️⃣ BASIC COLOR ANIMATION */
+.color {
+    background: red;
+    animation: colorChange 2s infinite alternate;
+}
+
+@keyframes colorChange {
+    from { background: red; }
+    to { background: yellow; }
+}
+
+/* 2️⃣ MOVE (TRANSLATE) */
+.move {
+    background: blue;
+    animation: moveBox 2s infinite alternate ease-in-out;
+}
+
+@keyframes moveBox {
+    from { transform: translateX(0); }
+    to { transform: translateX(150px); }
+}
+
+/* 3️⃣ ROTATE */
+.rotate {
+    background: green;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(300deg); }
+}
+
+/* 4️⃣ SCALE */
+.scale {
+    background: purple;
+    animation: zoom 1s infinite alternate;
+}
+
+@keyframes zoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
+
+/* 5️⃣ MULTIPLE ANIMATION */
+.multi {
+    background: orange;
+    animation: moveBox 2s infinite alternate,
+               spin 2s linear infinite;
+}
+
+/* 6️⃣ DELAY */
+.delay {
+    background: pink;
+    animation: moveBox 2s infinite alternate;
+    animation-delay: 2s;
+}
+
+/* 7️⃣ DIRECTION */
+.reverse {
+    background: cyan;
+    animation: moveBox 2s infinite alternate-reverse;
+}
+
+/* 8️⃣ FILL MODE */
+.fill {
+    background: brown;
+    animation: fillTest 2s forwards;
+}
+
+@keyframes fillTest {
+    from { transform: translateY(0); }
+    to { transform: translateY(100px); }
+}
+
+/* 9️⃣ TIMING FUNCTION */
+.timing {
+    background: lime;
+    animation: moveBox 2s infinite cubic-bezier(0.68,-0.55,0.27,1.55);
+}
+
+/* 🔟 HOVER PAUSE */
+.pause {
+    background: white;
+    color: black;
+    animation: spin 2s linear infinite;
+}
+
+.pause:hover {
+    animation-play-state: paused;
+}
+
+/* 1️⃣1️⃣ BOUNCE */
+.bounce {
+    background: gold;
+    animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100px); }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box color">1</div>
+<div class="box move">2</div>
+<div class="box rotate">3</div>
+<div class="box scale">4</div>
+<div class="box multi">5</div>
+<div class="box delay">6</div>
+<div class="box reverse">7</div>
+<div class="box fill">8</div>
+<div class="box timing">9</div>
+<div class="box pause">10</div>
+<div class="box bounce">11</div>
+
+</body>
+</html>

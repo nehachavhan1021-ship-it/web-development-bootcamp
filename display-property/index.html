@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Display Property Demo</title>
+
+    <style>
+            /* RESET */
+            * {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            /* ================= BLOCK ================= */
+            .block-example div {
+                display: block;
+                /* block = takes full width, starts on new line */
+                background-color: lightblue;
+            }
+
+            /* ================= INLINE ================= */
+            .inline-example span {
+                display: inline;
+
+                /* inline = stays in same line, width/height NOT applied */
+                background-color: lightgreen;
+            }
+
+            /* ================= INLINE-BLOCK ================= */
+            .inline-block-example div {
+                display: inline-block;
+                /* inline-block = stays in same line BUT allows width/height */
+                width: 100px;
+                height: 50px;
+                background-color: lightcoral;
+            }
+
+            /* ================= NONE ================= */
+            .none-example div {
+                display: none;
+                /* none = element is completely removed from layout */
+            }
+
+            /* ================= FLEX ================= */
+            .flex-example {
+                display: flex;
+                /* flex = children arranged in row (default) */
+                justify-content:space-around; /* horizontal spacing */
+                align-items: center;
+                flex-direction: row;
+                /* vertical alignment */
+                /* flex-direction: column; */
+                background-color: rgb(201, 201, 185);
+            }
+
+            .flex-example div {
+                background-color: orange;
+            }
+
+            /* ================= GRID ================= */
+            .grid-example {
+                display: grid;
+                /* grid = 2D layout (rows + columns) */
+                grid-template-columns:(60px 60px);
+                /* 3 equal columns */
+                gap: 10px;
+                background-color: lavender;
+            }
+
+            .grid-example div {
+                background-color: purple;
+                color: white;
+
+            }
+
+            .container {
+                border: 2px solid red;
+                display: flex;
+                height: 80vh;
+                /* justify-content: center; */
+                align-items: center;
+                /* flex-direction: column; */
+                flex-wrap: wrap;
+                align-content: flex-start;
+                /* there is no justify-items  in flexbox; */
+                flex-flow: row wrap;
+                 gap: 30px;
+                row-gap: 40px;
+                column-gap: 10px; */
+                /* flex-direction: ; */
+                /* gap: 40px 10px; */
+          }
+
+
+            .item {
+                /* flex-grow: 1; */
+                height: 92px;
+                width: 92px;
+                border: 2px solid black;
+                /* margin: 4px; */
+                background-color: blueviolet;
+      }
+
+            .order-1{
+                order: 1;
+            }
+            .order-2{
+                order: 2;
+            }
+            .order-3{
+                order: 3;
+            }
+
+            .item1{
+                /* flex-grow: 2; */
+                /* flex-shrink: 2; */
+                align-self: flex-end;
+            }
+
+
+            /* ================= INLINE-FLEX ================= */
+            .inline-flex-example {
+                display: inline-flex;
+                /* inline-flex = behaves like inline but uses flex inside */
+                background-color: pink;
+            }
+
+            /* ================= INLINE-GRID ================= */
+            .inline-grid-example {
+                display: inline-grid;
+                /* inline-grid = behaves like inline but uses grid inside */
+                grid-template-columns: 1fr 1fr;
+                background-color: lightgray;
+            }
+
+            /* ================= LIST-ITEM ================= */
+            .list-item-example div {
+                display: list-item;
+                /* behaves like <li> (adds bullet point) */
+            }
+    </style>
+  </head>
+  <body>
+    <!-- ================= BLOCK ================= -->
+    <h2>Block Example</h2>
+    <div class="block-example">
+      <!-- Each div takes full width and goes to next line -->
+      <div>Block 1</div>
+      <div>Block 2</div>
+    </div>
+
+    <!-- ================= INLINE ================= -->
+    <h2>Inline Example</h2>
+    <div class="inline-example">
+      <!-- All span stay in same line -->
+      <span>Inline 1</span>
+      <span>Inline 2</span>
+    </div>
+
+    <!-- ================= INLINE-BLOCK ================= -->
+    <h2>Inline-Block Example</h2>
+    <div class="inline-block-example">
+      <!-- Same line but width/height works -->
+      <div>Box 1</div>
+      <div>Box 2</div>
+    </div>
+
+    <!-- ================= NONE ================= -->
+    <h2>Display None Example</h2>
+    <div class="none-example">
+      <!-- This will NOT be visible -->
+      <div>You can't see me</div>
+    </div>
+
+    <!-- ================= FLEX ================= -->
+    <h2>Flex Example</h2>
+    <div class="flex-example">
+      <!-- Arranged in row with spacing -->
+      <div>Flex 1</div>
+      <div>Flex 2</div>
+      <div>Flex 3</div>
+    </div>
+
+    <!-- ================= GRID ================= -->
+    <h2>Grid Example</h2>
+    <div class="grid-example">
+      <!-- Placed in 3 columns -->
+      <div>Grid 1</div>
+      <div>Grid 2</div>
+      <div>Grid 3</div>
+      <div>Grid 4</div>
+    </div>
+
+    <!-- ================= INLINE-FLEX ================= -->
+    <h2>Inline-Flex Example</h2>
+    <div class="inline-flex-example">
+      <!-- Acts inline outside, flex inside -->
+      <div>IF 1</div>
+      <div>IF 2</div>
+    </div>
+
+    <!-- ================= INLINE-GRID ================= -->
+    <h2>Inline-Grid Example</h2>
+    <div class="inline-grid-example">
+      <!-- Acts inline outside, grid inside -->
+      <div>IG 1</div>
+      <div>IG 2</div>
+    </div>
+
+    <!-- ================= LIST-ITEM ================= -->
+    <h2>List-Item Example</h2>
+    <div class="list-item-example">
+      <!-- Shows bullet like list -->
+      <div>Item 1</div>
+      <div>Item 2</div>
+    </div>
+  </body>
+</html>

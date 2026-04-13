@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Model Demo</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #111;
+    color: white;
+    padding: 20px;
+}
+
+/* COMMON STYLE */
+.demo {
+    margin: 20px;
+    background: #333;
+    color: white;
+    text-align: center;
+}
+
+/* 1️⃣ CONTENT ONLY */
+.content {
+    width: 200px;
+    height: 100px;
+    background: red;
+}
+
+/* 2️⃣ PADDING */
+.padding {
+    width: 200px;
+    padding: 30px;
+    background: blue;
+}
+
+/* 3️⃣ BORDER */
+.border {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid yellow;
+    background: green;
+}
+
+/* 4️⃣ MARGIN */
+.margin {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid white;
+    margin: 40px;
+    background: purple;
+}
+
+/* 5️⃣ BOX-SIZING (IMPORTANT 🔥) */
+.boxSizing {
+    width: 200px;
+    padding: 30px;
+    border: 10px solid orange;
+    background: teal;
+    box-sizing: border-box;
+}
+
+/* 6️⃣ OVERFLOW */
+.overflow {
+    width: 200px;
+    height: 80px;
+    overflow: auto;
+    background: brown;
+}
+
+/* 7️⃣ OUTLINE vs BORDER */
+.outline {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid red;
+    outline: 5px dashed yellow;
+    background: black;
+}
+
+/* 8️⃣ BOX COMPARISON */
+.compare1 {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid white;
+    background: gray;
+}
+
+.compare2 {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid white;
+    background: darkcyan;
+    box-sizing: border-box;
+    
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>1️⃣ Content Only</h2>
+<div class="demo content">Content</div>
+
+<h2>2️⃣ Padding</h2>
+<div class="demo padding">Padding adds space INSIDE</div>
+
+<h2>3️⃣ Border</h2>
+<div class="demo border">Border around padding</div>
+
+<h2>4️⃣ Margin</h2>
+<div class="demo margin">Margin adds OUTSIDE space</div>
+
+<h2>5️⃣ Box-Sizing (Best Practice)</h2>
+<div class="demo boxSizing">Width stays fixed</div>
+
+<h2>6️⃣ Overflow</h2>
+<div class="demo overflow">
+    This is long content that will overflow the box.
+    Scroll to see more content inside the box.
+</div>
+
+<h2>7️⃣ Outline vs Border</h2>
+<div class="demo outline">Outline does NOT affect size</div>
+
+<h2>8️⃣ Comparison</h2>
+<div class="demo compare1">Normal (size increases)</div>
+<div class="demo compare2">Border-box (size fixed)</div>
+
+</body>
+</html>

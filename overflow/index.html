@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Overflow Example</title>
+
+<style>
+body {
+    font-family: Arial;
+}
+
+/* Common box style */
+.box {
+    width: 250px;
+    height: 120px;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 10px;
+}
+
+/* Different overflow types */
+
+.visible {
+    overflow: visible; /* default */
+    background-color: lightblue;
+}
+
+.hidden {
+    overflow: hidden;
+    background-color: lightcoral;
+}
+
+.scroll {
+    overflow: scroll;
+    background-color: lightgreen;
+}
+
+.auto {
+    overflow: auto;
+    background-color: lightyellow;
+}
+</style>
+
+</head>
+<body>
+
+<h2>Overflow: visible (default)</h2>
+<div class="box visible">
+This is some long content that will overflow outside the box. It will not be cut or scrollable.
+</div>
+
+<h2>Overflow: hidden</h2>
+<div class="box hidden">
+This is some long content that will overflow but will be hidden. You cannot see extra content.
+</div>
+
+<h2>Overflow: scroll</h2>
+<div class="box scroll">
+This is some long content that will overflow and always show scrollbars even if not needed.
+</div>
+
+<h2>Overflow: auto</h2>
+<div class="box auto">
+This is some long content that will overflow and show scrollbars only when needed.
+</div>
+<img src="/spotify-clone/logo.svg">
+
+</body>
+</html>

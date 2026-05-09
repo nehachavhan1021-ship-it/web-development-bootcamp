@@ -1,0 +1,21 @@
+{
+  "name": "spotify-clone",
+  "version": "1.0.0",
+  "tupe": "module",
+  "description": "this is spotify clone",
+  "keywords": [
+    "spotify"
+  ],
+  "license": "ISC",
+  "author": "neha",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "slugify": "^1.6.9"
+  },
+  "devDependencies": {}
+}
